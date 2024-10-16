@@ -25,7 +25,7 @@ def load_file(filename: str = "") -> str:
 
 def main():
     # Load source file
-    source_text = load_file("data/source.txt")
+    source_text = load_file("data/the_yellow_wallpaper.txt")
 
     # Create a chain of thought prompt to guide GPT through the analysis
     messages = [
@@ -34,10 +34,10 @@ def main():
             "role": "user",
             "content": (
                 "Read the following text and provide a chain of thought analysis. "
-                "Summarize each stanza, highlighting the underlying themes, emotions, or stylistic nuances, and then provide an overall summary of the text. "
+                "Summarize each paragraph, highlighting the underlying themes, emotions, or stylistic nuances, and then provide an overall summary of the text. "
                 "Explain each part of your reasoning step by step.\n\n"
                 f"Text: {source_text}\n\n"
-                "Chain of Thought and Stanza-by-Stanza Summary:"
+                "Chain of Thought and paragraph-by-paragraph Summary:"
             ),
         },
     ]
